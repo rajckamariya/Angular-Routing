@@ -26,7 +26,9 @@ export class EditServerComponent implements OnInit {
       this.allowEdit = queryParam['allowEdit'] === '1' ? 'true' : 'false';
     });
     console.log(this.allowEdit);
-    this.server = this.serversService.getServer(1);
+    this.server = this.serversService.getServer(
+      1
+    );
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
   }
