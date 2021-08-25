@@ -1,5 +1,5 @@
-<h4 *ngIf="allowEdit==='false'">You Are not allow to Edit</h4>
-<div *ngIf="allowEdit==='true'">
+<h4 *ngIf="allowEdit===false">You Are not allow to Edit</h4>
+<div *ngIf="allowEdit===true">
   <div class="form-group">
     <label for="name">Server Name</label>
     <input
