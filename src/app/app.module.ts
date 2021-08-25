@@ -12,9 +12,11 @@ import { UserComponent } from './users/user/user.component';
 import { ServersService } from './servers/servers.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule,AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -25,7 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
     UserComponent,
     PageNotFoundComponent
   ],
-  providers: [ServersService],
+  providers: [ServersService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
